@@ -8,7 +8,31 @@ class Renderer:
         self.screen = screen
         self.width = width
         self.height = height
-        self.textures = textures
+        self.textures = self.load_(textures)
+
+    import pygame
+
+class Renderer:
+    def __init__(self, screen, width, height, textures):
+        self.screen = screen
+        self.width = width
+        self.height = height
+        self.textures = self.load_textures(textures)
+
+    def load_textures(self, texture_paths):
+        """Load textures from the given file paths."""
+        textures = []
+        for path in texture_paths:
+            try:
+                texture = pygame.image.load(path).convert()
+                textures.append(texture)
+            except pygame.error as e:
+                print(f"Unable to load texture {path}: {e}")
+        return textures
+
+    def render(self):
+        """Render method to be implemented."""
+        pass
 
     def render(self, player, maze):
         for x in range(self.width):

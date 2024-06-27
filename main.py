@@ -14,7 +14,8 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 # Initialize maze, player, and renderer
 maze = Maze()
 player = Player(1.5, 1.5, 0)
-renderer = Renderer(screen, WIDTH, HEIGHT)
+#renderer = Renderer(screen, WIDTH, HEIGHT)
+
 
 running = True
 while running:
@@ -33,7 +34,7 @@ while running:
         player.rotate(1)
 
     screen.fill((0, 0, 0))
-    renderer.render(player, maze)
+    #renderer.render()
     pygame.display.flip()
 
 pygame.quit()
