@@ -1,2 +1,2 @@
 # Maze_project
-Maze Game Project
+Maze Game Project by KALORSOR
